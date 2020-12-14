@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<br>
+<h3 align="center">Log in</h3>
+<p align="center">Don't have an account? CLick here to <a href="register">register</a></p>
+<br>
+<form action="" method="POST">
+
+{% csrf_token %}
+
+<table align="center">
+    
+    <tr>
+        <td>Username <input type="text" name="username" id=""><br><br>
+        Password <input type="password" name="password" id="">
+        </td>
+    </tr>
+    
+    <tr>
+        <td><br><input class="btn btn-info" type="submit" value="Log in">
+        <input class = "btn btn-danger" type="reset" value="Reset"></td>
+    </tr>
+</table>
+
+
+
+
+</form>
+
+{% for message in messages %}
+    <br>
+    <p id = "messages" align="center">{{message}}</p>
+{% endfor %}
+{% endblock content %}

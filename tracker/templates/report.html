@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<br>
+<h1 align="center">{{user}}'s report</h1>
+<br><br>
+
+<table align="center" cellspacing="10" cellpadding="10" border="3">
+
+<tr>
+<th>Date</th>
+<th>Clean Diet</th>
+<th>Coding</th>
+<th>Reading</th>
+<th>Current Weight</th>
+<th>Wake up early</th>
+<th>User</th>
+</tr>
+
+
+{% for i in report  %}
+
+<tr>
+<th>{{i.date}}</th>
+<th>{{i.clean_diet}}</th>
+<th>{{i.coding}}</th>
+<th>{{i.reading}}</th>
+<th>{{i.weight}}</th>
+<th>{{i.wakeup_early}}</th>
+<th>{{i.user}}</th>
+</tr>
+
+{% endfor %}
+
+
+</table>
+{% endblock content %}
